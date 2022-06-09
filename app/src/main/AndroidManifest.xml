@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DzdTech">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
