@@ -46,10 +46,13 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:hint="@string/login_button"/>
+        android:hint="@string/login_button"
+        android:textColorHint="@color/white"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"/>
 
 
 
