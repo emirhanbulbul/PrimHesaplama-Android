@@ -6,5 +6,9 @@
     <string name="login_password">Şifre</string>
     <string name="login_button">Giriş Yap</string>
 
-
+    <!-- App Exit Alert Dialog -->
+    <string name="app_exit_title">Uyarı!</string>
+    <string name="app_exit_message">Uygulamadan çıkmak istediğinize emin misiniz?</string>
+    <string name="app_exit_message_positive_btn">Evet</string>
+    <string name="app_exit_mesaage_negative_btn">Hayır</string>
 </resources>
