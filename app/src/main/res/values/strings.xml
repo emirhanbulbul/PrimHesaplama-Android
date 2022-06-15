@@ -11,4 +11,9 @@
     <string name="app_exit_message">Uygulamadan çıkmak istediğinize emin misiniz?</string>
     <string name="app_exit_message_positive_btn">Evet</string>
     <string name="app_exit_mesaage_negative_btn">Hayır</string>
+
+    <!--Bottom Bar Menu-->
+    <string name="dashboard">Dashboard</string>
+    <string name="project">Projelerim</string>
+    <string name="calls">Çağrılarım</string>
 </resources>
