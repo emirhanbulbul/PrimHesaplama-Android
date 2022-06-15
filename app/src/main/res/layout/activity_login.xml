@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center_vertical"
     android:background="@color/login_bg"
@@ -35,7 +34,6 @@
         android:minHeight="48dp"
         android:textColorHint="@color/grey" />
 
-
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
@@ -66,8 +64,6 @@
         android:backgroundTint="@color/loginbutton_bg"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"/>
-
-
 
 
 
