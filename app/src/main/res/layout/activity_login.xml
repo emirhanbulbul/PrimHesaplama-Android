@@ -34,13 +34,7 @@
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:textColorHint="@color/grey" />
-<com.google.android.material.textfield.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:passwordToggleEnabled="true"
 
-
-    >
 
     <EditText
         android:id="@+id/password"
@@ -59,8 +53,6 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColorHint="@color/grey" />
-
-</com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/login"

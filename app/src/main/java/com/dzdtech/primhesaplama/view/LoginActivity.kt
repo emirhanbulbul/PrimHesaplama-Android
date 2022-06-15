@@ -5,13 +5,10 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
-import androidx.lifecycle.ViewModelProvider
 import com.dzdtech.primhesaplama.R
-import com.dzdtech.primhesaplama.viewmodel.LoginActivityViewModel
 import kotlin.system.exitProcess
 
 class LoginActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -20,9 +17,6 @@ class LoginActivity : AppCompatActivity() {
         val animation = AnimationUtils.loadAnimation(this,R.anim.shake)
 
         logo.startAnimation(animation)
-
-        //LoginActivityViewModel initialization
-        val viewModel= ViewModelProvider(this).get(LoginActivityViewModel::class.java)
     }
 
     override fun onBackPressed(){
