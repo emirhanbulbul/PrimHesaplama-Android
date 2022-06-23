@@ -16,4 +16,14 @@
     <string name="dashboard">Dashboard</string>
     <string name="project">Projelerim</string>
     <string name="calls">Çağrılarım</string>
+    
+    <!-- Dashboard Screen -->
+    <string name="toplam_prim_hakedis">Toplam Prim Hakediş</string>
+    <string name="cagri_prim_hakedis">Çağrı Prim Hakediş</string>
+    <string name="proje_prim_hakedis">Proje Prim Hakediş</string>
+    <string name="acik_proje_ve_cagrilarim">Açık Projelerim ve\nÇağrılarım</string>
+    <string name="toplam_prim_hakedis_value">0</string>
+    <string name="cagri_prim_hakedis_value">0</string>
+    <string name="proje_prim_hakedis_value">0</string>
+    <string name="acik_proje_ve_cagrilarim_value">0</string>
 </resources>
