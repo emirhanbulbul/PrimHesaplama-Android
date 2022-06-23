@@ -14,4 +14,8 @@
     <color name="dashboard_card_bg">#F3F3F3</color>
     <color name="dashboard_card_title">#000000</color>
     <color name="dashboard_card_value">#000000</color>
+
+    <!-- Progress Bar-->
+    <color name="progressBarStart">#2196F3</color>
+    <color name="progressBarEnd">#3F51B5</color>
 </resources>
