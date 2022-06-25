@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Dzd Tech</string>
+
+    <!-- Login Screen -->
+    <string name="login_email">E-mail</string>
+    <string name="login_password">Şifre</string>
+    <string name="login_button">Giriş Yap</string>
+
+    <!-- App Exit Alert Dialog -->
+    <string name="app_exit_title">Uyarı!</string>
+    <string name="app_exit_message">Uygulamadan çıkmak istediğinize emin misiniz?</string>
+    <string name="app_exit_message_positive_btn">Evet</string>
+    <string name="app_exit_mesaage_negative_btn">Hayır</string>
+
+    <!--Bottom Bar Menu-->
+    <string name="dashboard">Dashboard</string>
+    <string name="project">Projelerim</string>
+    <string name="calls">Çağrılarım</string>
+    
+    <!-- Dashboard Screen -->
+    <string name="toplam_prim_hakedis">Toplam Prim Hakediş</string>
+    <string name="cagri_prim_hakedis">Çağrı Prim Hakediş</string>
+    <string name="proje_prim_hakedis">Proje Prim Hakediş</string>
+    <string name="acik_proje_ve_cagrilarim">Açık Projelerim ve\nÇağrılarım</string>
+    <string name="toplam_prim_hakedis_value">0</string>
+    <string name="cagri_prim_hakedis_value">0</string>
+    <string name="proje_prim_hakedis_value">0</string>
+    <string name="acik_proje_ve_cagrilarim_value">0</string>
 </resources>
