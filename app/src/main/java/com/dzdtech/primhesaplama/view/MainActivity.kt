@@ -2,16 +2,18 @@ package com.dzdtech.primhesaplama.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.Fragment
 import com.dzdtech.primhesaplama.R
+import com.dzdtech.primhesaplama.services.Constants
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val idValue = intent.getStringExtra("id").toString()
+
+        Constants.idValue = idValue
 
         loadFragment(DashboardFragment())
 

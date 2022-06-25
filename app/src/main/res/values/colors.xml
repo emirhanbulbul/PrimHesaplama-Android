@@ -10,6 +10,7 @@
     <color name="grey">#A0A0A0</color>
     <color name="splash_bg">#FFFFFF</color>
     <color name="login_bg">#FFFFFF</color>
+    <color name="login_warning">#F44336</color>
     <color name="loginbutton_bg">#15A362</color>
     <color name="dashboard_card_bg">#F3F3F3</color>
     <color name="dashboard_card_title">#000000</color>

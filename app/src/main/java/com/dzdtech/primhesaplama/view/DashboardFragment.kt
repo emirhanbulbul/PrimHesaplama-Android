@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
 import com.dzdtech.primhesaplama.R
 import com.dzdtech.primhesaplama.viewmodel.DashboardViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -19,7 +18,6 @@ class DashboardFragment : Fragment() {
     private val TAG = "Dashboard Fragment"
 
     companion object {
-        fun newInstance() = DashboardFragment()
     }
 
     private lateinit var viewModel: DashboardViewModel

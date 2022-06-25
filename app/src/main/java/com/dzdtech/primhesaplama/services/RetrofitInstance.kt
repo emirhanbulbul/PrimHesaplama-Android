@@ -8,11 +8,15 @@ abstract class RetrofitInstance {
     companion object {
         private val retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://62b2469220cad3685c8c1095.mockapi.io/")
+            .baseUrl(Constants.baseUrl)
             .build()
 
         val retrofitDashboardInstance: DashboardApi by lazy {
             retrofit.create(DashboardApi::class.java)
+        }
+
+        val retrofitLoginInstance: LoginApi by lazy{
+            retrofit.create(LoginApi::class.java)
         }
     }
 }
