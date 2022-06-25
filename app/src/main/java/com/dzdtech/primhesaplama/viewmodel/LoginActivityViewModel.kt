@@ -6,8 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dzdtech.primhesaplama.model.User
-import com.dzdtech.primhesaplama.model.UserLoginResponse
 import com.dzdtech.primhesaplama.services.RetrofitInstance
+
 import kotlinx.coroutines.launch
 
 class LoginActivityViewModel:ViewModel() {
