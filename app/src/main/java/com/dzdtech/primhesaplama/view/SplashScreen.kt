@@ -7,16 +7,20 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.animation.AnimationUtils
-import android.widget.ImageView
 import com.dzdtech.primhesaplama.R
+import com.dzdtech.primhesaplama.databinding.SplashScreenBinding
+
 @SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {
+    private lateinit var binding: SplashScreenBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.splash_screen)
-        val logo = findViewById<ImageView>(R.id.logo)
+        binding = SplashScreenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         val animation = AnimationUtils.loadAnimation(this, R.anim.fade_in)
-        logo.startAnimation(animation)
+        binding.logo.startAnimation(animation)
 
         Handler(Looper.getMainLooper()).postDelayed({
         val intent = Intent(this, LoginActivity::class.java)

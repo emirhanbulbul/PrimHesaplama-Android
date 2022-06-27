@@ -5,17 +5,20 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.dzdtech.primhesaplama.R
 import com.dzdtech.primhesaplama.services.Constants
+import com.dzdtech.primhesaplama.view.calls_screen.CallFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val idValue = intent.getStringExtra("id").toString()
-
         Constants.idValue = idValue
 
         loadFragment(DashboardFragment())
+
+
 
         val bottomMenu = findViewById<BottomNavigationView>(R.id.bottom_menu)
         bottomMenu.setOnItemSelectedListener {item ->
@@ -42,6 +45,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
 
     //Ekrana ilgili fragment'i yükler
     private  fun loadFragment(fragment: Fragment){

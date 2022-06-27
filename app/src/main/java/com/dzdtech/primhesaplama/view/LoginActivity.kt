@@ -5,57 +5,49 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.Button
-import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 
 import androidx.lifecycle.ViewModelProvider
 import com.dzdtech.primhesaplama.R
+import com.dzdtech.primhesaplama.databinding.ActivityLoginBinding
 
 import com.dzdtech.primhesaplama.viewmodel.LoginActivityViewModel
-import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_login.progress_Bar
-import kotlinx.android.synthetic.main.fragment_dashboard.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlin.system.exitProcess
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val logo = findViewById<ImageView>(R.id.logo)
         val animation = AnimationUtils.loadAnimation(this,R.anim.shake)
 
-        logo.startAnimation(animation)
-
+        binding.logo.startAnimation(animation)
         //LoginActivityViewModel initialization
         val viewModel= ViewModelProvider(this)[LoginActivityViewModel::class.java]
 
-        val loginButton = findViewById<View>(R.id.login) as Button
-        loginButton.setOnClickListener {
+        binding.login.setOnClickListener {
 
-               if(email?.text.toString().length<8 ||password?.text.toString().length<5){
-                   loginWarning?.text = "Lütfen geçerli bir e-posta ve şifre giriniz!"
-                   loginWarning?.visibility = View.VISIBLE
+               if(binding.email.text.toString().length<8 ||binding.password.text.toString().length<5){
+                   binding.loginWarning.text = getString(R.string.login_warning)
+                   binding.loginWarning.visibility = View.VISIBLE
                }
                 else{
-                   progress_Bar?.visibility = View.VISIBLE
-                   loginWarning?.visibility = View.GONE
-                   viewModel.postRequest(email?.text.toString(), password?.text.toString())
+                   binding.progressBar.visibility = View.VISIBLE
+                   binding.loginWarning.visibility = View.GONE
+                   viewModel.postRequest(binding.email.text.toString(), binding.password.text.toString())
                }
 
         }
         viewModel.loginResponse.observe(this){
             it?.let {
                 if(it == -1){
-                    loginWarning?.text = "E-posta veya şifre hatalı!"
-                    loginWarning?.visibility = View.VISIBLE
+                    binding.loginWarning.text = getString(R.string.login_warning_2)
+                    binding.loginWarning.visibility = View.VISIBLE
                 }
                 else{
-                    progress_Bar?.visibility = View.VISIBLE
+                    binding.progressBar.visibility = View.VISIBLE
                     val intent = Intent(this, MainActivity::class.java)
                     intent.putExtra("id",it.toString())
                     startActivity(intent)
@@ -64,7 +56,7 @@ class LoginActivity : AppCompatActivity() {
 
                 //Progress bar gizleme
                 if (!viewModel.progress) {
-                    progress_Bar?.visibility = View.GONE
+                    binding.progressBar.visibility = View.GONE
                 }
 
             }

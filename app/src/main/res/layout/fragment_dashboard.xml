@@ -197,7 +197,7 @@
     </ScrollView>
 
     <ProgressBar
-        android:id="@+id/progress_Bar"
+        android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:indeterminateDrawable="@drawable/progress_bar"
         android:layout_width="200dp"

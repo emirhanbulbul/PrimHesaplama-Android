@@ -1,34 +1,27 @@
-package com.dzdtech.primhesaplama.view
+package com.dzdtech.primhesaplama.view.calls_screen
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.dzdtech.primhesaplama.R
 import com.dzdtech.primhesaplama.viewmodel.CallViewModel
-import com.dzdtech.primhesaplama.viewmodel.ProjectViewModel
 
-class CallFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = CallFragment()
-    }
-
+class ContinuesCallFragment : Fragment() {
     private lateinit var viewModel: CallViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_call, container, false)
+        return inflater.inflate(R.layout.fragment_call_continues, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this).get(CallViewModel::class.java)
+        viewModel = ViewModelProvider(this)[CallViewModel::class.java]
 
     }
-
 }

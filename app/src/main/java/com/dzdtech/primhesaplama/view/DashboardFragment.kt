@@ -8,24 +8,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.dzdtech.primhesaplama.R
+import com.dzdtech.primhesaplama.databinding.FragmentDashboardBinding
 import com.dzdtech.primhesaplama.viewmodel.DashboardViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.android.synthetic.main.fragment_dashboard.*
 
 class DashboardFragment : Fragment() {
+    private lateinit var binding: FragmentDashboardBinding
     private val TAG = "Dashboard Fragment"
-
-    companion object {
-    }
-
     private lateinit var viewModel: DashboardViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-
     ): View? {
         return inflater.inflate(R.layout.fragment_dashboard, container, false)
 
@@ -33,6 +29,7 @@ class DashboardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+            binding = FragmentDashboardBinding.bind(view)
 
             viewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
 
@@ -43,14 +40,14 @@ class DashboardFragment : Fragment() {
         viewModel.data.observe(viewLifecycleOwner) { userList ->
             Log.e(TAG, "$userList")
 
-            topPrimHakedis?.text = userList.topPrim.toString()
-            cagriPrimHakedis.text = userList.cagriPrim.toString()
-            projePrimHakedis.text = userList.projePrim.toString()
-            acikProje.text = userList.acikProje.toString()
+            binding.topPrimHakedis.text = userList.topPrim.toString()
+            binding.cagriPrimHakedis.text = userList.cagriPrim.toString()
+            binding.projePrimHakedis.text = userList.projePrim.toString()
+            binding.acikProje.text = userList.acikProje.toString()
 
             //Progress bar gizleme
             if (!viewModel.progress) {
-                progress_Bar?.visibility = View.GONE
+                binding.progressBar.visibility = View.GONE
             }
         }
 

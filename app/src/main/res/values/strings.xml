@@ -5,7 +5,8 @@
     <string name="login_email">E-mail</string>
     <string name="login_password">Şifre</string>
     <string name="login_button">Giriş Yap</string>
-
+    <string name="login_warning">Lütfen geçerli bir e-posta ve şifre giriniz!</string>
+    <string name="login_warning_2">E-posta veya şifre hatalı!</string>
     <!-- App Exit Alert Dialog -->
     <string name="app_exit_title">Uyarı!</string>
     <string name="app_exit_message">Uygulamadan çıkmak istediğinize emin misiniz?</string>
@@ -16,7 +17,7 @@
     <string name="dashboard">Dashboard</string>
     <string name="project">Projelerim</string>
     <string name="calls">Çağrılarım</string>
-    
+
     <!-- Dashboard Screen -->
     <string name="toplam_prim_hakedis">Toplam Prim Hakediş</string>
     <string name="cagri_prim_hakedis">Çağrı Prim Hakediş</string>
@@ -26,4 +27,10 @@
     <string name="cagri_prim_hakedis_value">0</string>
     <string name="proje_prim_hakedis_value">0</string>
     <string name="acik_proje_ve_cagrilarim_value">0</string>
+
+    <!-- Calls Screen Tab Menu -->
+    <string name="all">Tümü</string>
+    <string name="closed">Kapanan</string>
+    <string name="continues">Devam Eden</string>
+    <string name="canceled">İptal Edilen</string>
 </resources>
