@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.dzdtech.primhesaplama.R
 import com.dzdtech.primhesaplama.services.Constants
 import com.dzdtech.primhesaplama.view.calls_screen.CallFragment
+import com.dzdtech.primhesaplama.view.project_screen.ProjectFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val idValue = intent.getStringExtra("id").toString()
+        val idName = intent.getStringExtra("name").toString()
+        val idSurname = intent.getStringExtra("surname").toString()
         Constants.idValue = idValue
+        Constants.userName = idName
+        Constants.userSurname = idSurname
 
         loadFragment(DashboardFragment())
 

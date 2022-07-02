@@ -23,5 +23,5 @@
     <!-- Calls Fragment-->
     <color name="tabMenuBg">#15A362</color>
     <color name="tabMenuSelectedTextColor">#ffffff</color>
-
+    <color name="bg">#102027</color>
 </resources>

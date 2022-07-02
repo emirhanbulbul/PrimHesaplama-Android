@@ -9,6 +9,7 @@ interface LoginApi {
     //User bilgileri post edilir, cevap olarak UserLoginResponse
     // modeline kullanıcı id'si çekilir.
 
-    @POST("login")
+    @POST("/api/Login/Login")
     suspend fun postUser(@Body usr: User): UserLoginResponse
+
 }

@@ -5,13 +5,13 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import com.dzdtech.primhesaplama.R
-import com.dzdtech.primhesaplama.adapter.ViewPagerAdapter
+import com.dzdtech.primhesaplama.adapter.CallsViewPagerAdapter
 import com.dzdtech.primhesaplama.databinding.FragmentCallBinding
 import com.dzdtech.primhesaplama.viewmodel.CallViewModel
 import com.google.android.material.tabs.TabLayoutMediator
 
 class CallFragment : Fragment() {
-    private var fragmentCallBinding: FragmentCallBinding? = null
+    private lateinit var binding: FragmentCallBinding
     private lateinit var viewModel: CallViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,10 +23,9 @@ class CallFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[CallViewModel::class.java]
-        val binding= FragmentCallBinding.bind(view)
-        fragmentCallBinding = binding
+        binding= FragmentCallBinding.bind(view)
 
-        val adapter = ViewPagerAdapter(childFragmentManager, lifecycle)
+        val adapter = CallsViewPagerAdapter(childFragmentManager, lifecycle)
         binding.viewPager.adapter = adapter
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
@@ -35,15 +34,11 @@ class CallFragment : Fragment() {
                 0 -> tab.text = getString(R.string.all)
                 1 -> tab.text = getString(R.string.closed)
                 2 -> tab.text = getString(R.string.continues)
-                3 -> tab.text = getString(R.string.canceled)
             }
         }.attach()
 
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        fragmentCallBinding = null
-    }
+
 
 }

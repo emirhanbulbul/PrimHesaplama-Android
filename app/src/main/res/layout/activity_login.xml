@@ -63,18 +63,28 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
-        android:textSize="17dp"
+        android:textSize="17sp"
         android:text=""
         android:textColor="@color/login_warning"
         android:textAlignment="center"
         android:visibility="gone" />
 
+        <CheckBox
+            android:id="@+id/rememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:checked="true"
+            android:textSize="17sp"
+            android:text="@string/remember_me"/>
     <Button
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="12dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
         android:hint="@string/login_button"
         android:textColorHint="@color/white"

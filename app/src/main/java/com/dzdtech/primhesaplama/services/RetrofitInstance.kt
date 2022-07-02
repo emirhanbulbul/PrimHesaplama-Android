@@ -11,9 +11,6 @@ abstract class RetrofitInstance {
             .baseUrl(Constants.baseUrl)
             .build()
 
-        val retrofitDashboardInstance: DashboardApi by lazy {
-            retrofit.create(DashboardApi::class.java)
-        }
 
         val retrofitLoginInstance: LoginApi by lazy{
             retrofit.create(LoginApi::class.java)
