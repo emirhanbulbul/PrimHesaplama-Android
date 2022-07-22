@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        android:title="@string/dashboard"  />
+    <item
+        android:id="@+id/project"
+        android:icon="@drawable/ic_baseline_assignment_24"
+        android:title="@string/project" />
+    <item
+        android:id="@+id/calls"
+        android:icon="@drawable/ic_baseline_call_24"
+        android:title="@string/calls" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/profile"/>
+</menu>
