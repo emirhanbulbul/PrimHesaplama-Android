@@ -1,14 +1,13 @@
 package com.dzdtech.primhesaplama.view
 
 import android.annotation.SuppressLint
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.dzdtech.primhesaplama.R
 import com.dzdtech.primhesaplama.databinding.FragmentDashboardBinding
 import com.dzdtech.primhesaplama.services.Constants
@@ -33,23 +32,22 @@ class DashboardFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-            binding = FragmentDashboardBinding.bind(view)
+        binding = FragmentDashboardBinding.bind(view)
 
-            viewModel = ViewModelProvider(this)[DashboardViewModel::class.java]
-            binding.welcomeText.text = "Hoşgeldin, ${Constants.userName + " "+ Constants.userSurname}"
+        viewModel = ViewModelProvider(this)[DashboardViewModel::class.java]
+        binding.welcomeText.text = "Hoşgeldin, ${Constants.userName + " " + Constants.userSurname}"
 
-        CoroutineScope(Dispatchers.IO).launch{
+        CoroutineScope(Dispatchers.IO).launch {
             viewModel.getData()
         }
 
         viewModel.data.observe(viewLifecycleOwner) {
             Log.e(TAG, "$it")
 
-            println("aaaaaa $it[0].toplamPrimHakedis.toString()")
-            binding.topPrimHakedis.text = it[0].toplamPrimHakedis.toString()
-            binding.cagriPrimHakedis.text = it[0].itsmPrimHakedis.toString()
-            binding.projePrimHakedis.text = it[0].projectPrimHakedis.toString()
-            binding.acikProje.text = it[0].projectAndItsmCount.toString()
+            binding.topPrimHakedis.text = it[Constants.idValue.toInt()].toplamPrimHakedis.toString()
+            binding.cagriPrimHakedis.text = it[Constants.idValue.toInt()].itsmPrimHakedis.toString()
+            binding.projePrimHakedis.text = it[Constants.idValue.toInt()].projectPrimHakedis.toString()
+            binding.acikProje.text = it[Constants.idValue.toInt()].projectAndItsmCount.toString()
 
             //Progress bar gizleme
             if (!viewModel.progress) {

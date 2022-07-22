@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/recycler_border"
     android:columnCount="2"
     android:padding="10dp"
@@ -76,7 +77,9 @@
             android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:maxWidth="120dp"
             android:drawablePadding="5dp"
+            android:ellipsize="end"
             android:text=""
             android:textColor="@color/white"
             android:textSize="17sp"
@@ -91,6 +94,7 @@
             android:textSize="17sp"
             android:textColor="@color/white"/>
     </LinearLayout>
+
 
 
 </GridLayout>

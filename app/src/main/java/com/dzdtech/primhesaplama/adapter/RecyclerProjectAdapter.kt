@@ -49,7 +49,6 @@ class RecyclerProjectAdapter(val projectsList: List<ProjectsResponse>) :
     fun statusText(statusCode: String): String {
         lateinit var status: String
         val statusCodeInt: Int = statusCode.toInt()
-
         when (statusCodeInt) {
             1 -> {
                 status = "Kapalı"
@@ -70,7 +69,6 @@ class RecyclerProjectAdapter(val projectsList: List<ProjectsResponse>) :
                 status = "Devam Ediyor"
             }
         }
-
         return status
     }
 

@@ -1,7 +1,7 @@
 package com.dzdtech.primhesaplama.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.dzdtech.primhesaplama.R
 import com.dzdtech.primhesaplama.services.Constants
@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val idValue = intent.getStringExtra("id").toString()
+
         val idName = intent.getStringExtra("name").toString()
         val idSurname = intent.getStringExtra("surname").toString()
         Constants.idValue = idValue
@@ -24,22 +25,26 @@ class MainActivity : AppCompatActivity() {
         loadFragment(DashboardFragment())
 
 
-
         val bottomMenu = findViewById<BottomNavigationView>(R.id.bottom_menu)
-        bottomMenu.setOnItemSelectedListener {item ->
-            when(item.itemId){
-                R.id.dashboard ->{
+        bottomMenu.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.dashboard -> {
                     loadFragment(DashboardFragment())
                     true
                 }
 
-                R.id.project ->{
+                R.id.project -> {
                     loadFragment(ProjectFragment())
                     true
                 }
 
-                R.id.calls->{
+                R.id.calls -> {
                     loadFragment(CallFragment())
+                    true
+                }
+
+                R.id.profile -> {
+                    loadFragment(ProfileFragment())
                     true
                 }
 
@@ -48,15 +53,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
     }
 
 
-
     //Ekrana ilgili fragment'i yükler
-    private  fun loadFragment(fragment: Fragment){
+    private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container,fragment)
+        transaction.replace(R.id.fragment_container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }

@@ -18,6 +18,7 @@
     <string name="dashboard">Dashboard</string>
     <string name="project">Projelerim</string>
     <string name="calls">Çağrılarım</string>
+    <string name="profile">Profil</string>
 
     <!-- Dashboard Screen -->
     <string name="toplam_prim_hakedis">Toplam Prim Hakediş</string>
@@ -42,4 +43,7 @@
     <!-- Project Screen -->
     <string name="jiraProjectNo">Jira Proje No: </string>
     <string name="ag">A/G: </string>
+
+    <!-- Profile Screen-->
+    <string name="logout">Çıkış Yap</string>
 </resources>

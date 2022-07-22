@@ -13,4 +13,9 @@
         android:id="@+id/calls"
         android:icon="@drawable/ic_baseline_call_24"
         android:title="@string/calls" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/profile"/>
 </menu>
