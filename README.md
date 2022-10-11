@@ -13,7 +13,7 @@ Geliştirdiğim bu android projesinde kullanıcılar toplam primlerini görebile
  4. SharedPreferences
 
 ## Ekran Görüntüleri
-
+|
 |![image](https://user-images.githubusercontent.com/14194362/195124732-b6740d95-9eb0-48f3-a83d-3baeb9e6d899.png)| 
 |:--:| 
 | *Splash Screen* |
@@ -21,4 +21,4 @@ Geliştirdiğim bu android projesinde kullanıcılar toplam primlerini görebile
 |![image](https://user-images.githubusercontent.com/14194362/195124885-21b5ff3a-532e-4ca2-a7b8-39e92c218c73.png)| 
 |:--:| 
 | *Login Screen* |
-
+|
