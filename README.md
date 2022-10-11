@@ -14,7 +14,7 @@ Geliştirdiğim bu android projesinde kullanıcılar toplam primlerini görebile
 
 ## Ekran Görüntüleri
 
-| ![splashscreen]([http://www.storywarren.com/wp-content/uploads/2016/09/space-1.jpg](https://user-images.githubusercontent.com/14194362/195121559-d6b2dc56-7d58-4b7d-b82c-47e11779352f.png)) | 
+| ![splashscreen]([http://www.storywarren.com/wp-content/uploads/2016/09/space-1.jpg](https://user-images.githubusercontent.com/14194362/195121559-d6b2dc56-7d58-4b7d-b82c-47e11779352f.png) | 
 |:--:| 
 | *Splash Screen* |
 
