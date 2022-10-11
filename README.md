@@ -21,3 +21,8 @@ Geliştirdiğim bu android projesinde kullanıcılar toplam primlerini görebile
 |:--:|
 | *Login Screen* |
 
+
+|<img src="https://user-images.githubusercontent.com/14194362/195125471-104155a6-1e92-443d-8518-b79d85e40c21.png" width="15%"></img>|
+|:--:|
+|**Splash Screen**|
+
