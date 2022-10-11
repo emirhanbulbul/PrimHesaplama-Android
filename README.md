@@ -14,8 +14,8 @@ Geliştirdiğim bu android projesinde kullanıcılar toplam primlerini görebile
 
 ## Ekran Görüntüleri
 
-| ![splashscreen.jpg](![image](https://user-images.githubusercontent.com/14194362/195124166-ffcb6aab-4f44-4797-b37d-cde0e6c733f1.png)
-) | 
+| ![image](https://user-images.githubusercontent.com/14194362/195124522-9569ace4-0077-45fb-807c-5a88b8b920f0.png)
+| 
 |:--:| 
 | *Splash Screen* |
 
