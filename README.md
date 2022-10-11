@@ -5,7 +5,7 @@ Geliştirdiğim bu android projesinde kullanıcılar toplam primlerini görebile
 
 Login olurken ekrana girilen e-posta ve şifre post request yapılır ve eğer öyle bir kullanıcı mecvutsa geriye kullanıcının id değeri döner. Bu id değerine göre kullanıcının verileri çekilir. 
 
-Eğer kullanıcı "Beni Hatırla" butonuna tıklarsa kullanıcı bilgileri SharedPreferences ile cihaza kaydedilir.
+Eğer kullanıcı **"Beni Hatırla"** butonuna tıklarsa kullanıcı bilgileri SharedPreferences ile cihaza kaydedilir.
 
 **Not: Projedeki bilgiler api ile gelmektedir. Api şu an çalışmadığı için uygulamada veriler görünmeyecektir. RecyclerView kısmı hiç görünmemektedir** 
 
